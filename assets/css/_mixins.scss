@@ -1,0 +1,69 @@
+// General
+@mixin main-fonts($color) {
+    font: 12px "Varela Round", sans-serif;
+    letter-spacing: 0.05em;
+    color: $color;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+@mixin fix-width($width) {
+    width: $width;
+    position: relative;
+    margin: 0px auto; 
+    padding: 0;
+}
+
+@mixin content-margin($top, $bottom, $leftright) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+    margin-left: $leftright;
+    margin-right: $leftright;
+}
+
+@mixin content-padding($top, $bottom, $leftright) {
+    padding-top: $top;
+    padding-bottom: $bottom;
+    padding-left: $leftright;
+    padding-right: $leftright;
+}
+
+//Navbar
+
+@mixin nav-link-hover() {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0%;
+    background-color: $custom-color-1;
+    margin-top: 5px;
+    transition: all ease-in-out 250ms;
+    margin-left: -5px;
+}
+
+//Footer
+
+@mixin footer_list() {
+    z-index: 1;
+    ul {
+        @include footer_links();
+        li { 
+        @include content-margin('', 8px, '');
+        }
+    }
+    }
+
+@mixin footer_links() {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin form-hover-out() {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-2em);
+    transition: visibility 0.1s, opacity 0.1s linear, transform 0.1s;
+    transition-delay: transform 0.1s;
+}
+
