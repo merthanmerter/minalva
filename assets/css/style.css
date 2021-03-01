@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 @import url("https://css.gg/menu-grid-o.css");
+@import url("https://css.gg/menu.css");
+@import url("https://css.gg/menu-grid-r.css");
+@import url("https://css.gg/shopping-bag.css");
 [class~="white"] {
   color: white;
 }
@@ -315,6 +318,11 @@ nav .nav_links_right ul li a:hover::after {
 
 nav .navbar-toggle {
   display: none;
+}
+
+nav .navbar-toggle ul li {
+  display: inline-block;
+  margin-left: 20px;
 }
 
 /* big landscape tablets, laptops, and desktops */

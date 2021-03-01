@@ -1,6 +1,11 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+// Icons
 @import url('https://css.gg/menu-grid-o.css');
+@import url('https://css.gg/menu.css');
+@import url('https://css.gg/menu-grid-r.css');
+@import url('https://css.gg/shopping-bag.css');
 
 // SCSS
 @import "mixins";
@@ -179,6 +184,12 @@ nav {
 
     .navbar-toggle {
         display: none;
+        ul {
+            li {
+                display: inline-block;
+                margin-left: 20px;
+            }
+        }
     }
 }
 
