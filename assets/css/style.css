@@ -322,7 +322,7 @@ nav .navbar-toggle {
 
 nav .navbar-toggle ul li {
   display: inline-block;
-  margin-left: 20px;
+  padding-left: 20px;
 }
 
 /* big landscape tablets, laptops, and desktops */
