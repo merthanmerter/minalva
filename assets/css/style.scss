@@ -114,24 +114,19 @@ input {
     @include fix-width(85vw);
 }
 
-header {
-    @include content-padding(100px, 100px, 0px);
-    width: 85vw;
-    position: relative;
-    margin: 0 auto;  
-}
-
 #banner {
-    min-height: 150px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
     height: calc((100vh * 0.3) - 50px);
-    @include content-margin (50px, 0 , 50px);
+    @include content-margin (50px, auto , 50px);
     border-top-left-radius: 40px;    
     border-top-right-radius: 40px;  
     background-color: $custom-color-3;
 }
 
 #banner__image {
-    min-height: 400px;
+    min-height: 50px;
     height: calc((100vh * 0.7) - 50px);
     @include content-margin (0, 50px , 50px);
     border-bottom-left-radius: 40px;    
@@ -152,19 +147,24 @@ header {
 @media (max-width:1025px) {
 
     #banner {
-        // height: 20vh;
         @include content-margin (0, 0 , 0);
         border-top-left-radius: 0;    
         border-top-right-radius: 0;
     }
 
     #banner__image {
-        // height: 20vh;
         @include content-margin (0, 0 , 0);
         border-bottom-left-radius: 0;    
         border-bottom-right-radius: 0;
         background-color: transparent;
     }
+}
+
+header {
+    width: 85vw;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 10px!important;  
 }
 
 nav {
