@@ -3,6 +3,16 @@
 @import url("https://css.gg/menu.css");
 @import url("https://css.gg/menu-grid-r.css");
 @import url("https://css.gg/shopping-bag.css");
+/* @mixin nav-link-hover() {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0%;
+    background-color: $custom-color-1;
+    margin-top: 5px;
+    transition: all ease-in-out 250ms;
+}
+*/
 [class~="white"] {
   color: white;
 }
@@ -227,8 +237,10 @@ input {
   margin-bottom: auto;
   margin-left: 50px;
   margin-right: 50px;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   background-color: #F7F7F7;
 }
 
@@ -239,8 +251,10 @@ input {
   margin-bottom: 50px;
   margin-left: 50px;
   margin-right: 50px;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
   background-color: #F7F7F7;
   background-image: url("http://www.mintorganiccare.com/wp-content/uploads/2019/05/Cork-candles-.jpg");
   background-position: center;
@@ -262,6 +276,8 @@ input {
     margin-right: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
   #banner__image {
     height: calc(100vh * 0.80);
@@ -269,6 +285,8 @@ input {
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     background-color: transparent;
@@ -299,7 +317,6 @@ nav .logo {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin-bottom: 8px;
 }
 
 nav .nav_links_left {
@@ -326,22 +343,6 @@ nav .nav_links_left ul li a {
   letter-spacing: 2px;
 }
 
-nav .nav_links_left ul li a::after {
-  content: '';
-  display: block;
-  height: 2px;
-  width: 0%;
-  background-color: #CC5E57;
-  margin-top: 5px;
-  -webkit-transition: all ease-in-out 250ms;
-  transition: all ease-in-out 250ms;
-  margin-left: -5px;
-}
-
-nav .nav_links_left ul li a:hover::after {
-  width: calc(100% + 10px);
-}
-
 nav .nav_links_right {
   -ms-grid-column-align: end;
       justify-self: end;
@@ -363,22 +364,6 @@ nav .nav_links_right ul li {
 
 nav .nav_links_right ul li a {
   letter-spacing: 2px;
-}
-
-nav .nav_links_right ul li a::after {
-  content: '';
-  display: block;
-  height: 2px;
-  width: 0%;
-  background-color: #CC5E57;
-  margin-top: 5px;
-  -webkit-transition: all ease-in-out 250ms;
-  transition: all ease-in-out 250ms;
-  margin-left: -5px;
-}
-
-nav .nav_links_right ul li a:hover::after {
-  width: calc(100% + 10px);
 }
 
 nav .navbar-toggle {
@@ -415,7 +400,6 @@ nav .navbar-toggle ul li {
         align-self: auto;
     -ms-grid-column: 1;
     grid-column: 1;
-    margin-bottom: 0px;
   }
   nav .nav_links_right {
     display: none;
