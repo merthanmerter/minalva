@@ -147,12 +147,14 @@ input {
 @media (max-width:1025px) {
 
     #banner {
+        height: calc((100vh * 0.2) - 50px);
         @include content-margin (0, 0 , 0);
         border-top-left-radius: 0;    
         border-top-right-radius: 0;
     }
 
     #banner__image {
+        height: calc((100vh * 0.80) - 50px);
         @include content-margin (0, 0 , 0);
         border-bottom-left-radius: 0;    
         border-bottom-right-radius: 0;

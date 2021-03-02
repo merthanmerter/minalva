@@ -255,6 +255,7 @@ input {
 /* big landscape tablets, laptops, and desktops */
 @media (max-width: 1025px) {
   #banner {
+    height: calc((100vh * 0.2) - 50px);
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 0;
@@ -263,6 +264,7 @@ input {
     border-top-right-radius: 0;
   }
   #banner__image {
+    height: calc((100vh * 0.80) - 50px);
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 0;
