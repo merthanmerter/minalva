@@ -70,7 +70,7 @@ input {
 
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 1025px) {
     .margin {
         &-desktop {
             @include content-margin(0px, '', '');
@@ -114,19 +114,63 @@ input {
     @include fix-width(85vw);
 }
 
+header {
+    @include content-padding(100px, 100px, 0px);
+    width: 85vw;
+    position: relative;
+    margin: 0 auto;  
+}
+
 #banner {
-    // height: 20vh;
+    min-height: 150px;
+    height: calc((100vh * 0.3) - 50px);
+    @include content-margin (50px, 0 , 50px);
+    border-top-left-radius: 40px;    
+    border-top-right-radius: 40px;  
     background-color: $custom-color-3;
 }
 
+#banner__image {
+    min-height: 400px;
+    height: calc((100vh * 0.7) - 50px);
+    @include content-margin (0, 50px , 50px);
+    border-bottom-left-radius: 40px;    
+    border-bottom-right-radius: 40px;  
+    background-color: $custom-color-3;
+    background-image:  url('http://www.mintorganiccare.com/wp-content/uploads/2019/05/Cork-candles-.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-size: 40px;
+    padding: 150px;
+    opacity: 0.9;
+}
+
+
+/* big landscape tablets, laptops, and desktops */
+@media (max-width:1025px) {
+
+    #banner {
+        // height: 20vh;
+        @include content-margin (0, 0 , 0);
+        border-top-left-radius: 0;    
+        border-top-right-radius: 0;
+    }
+
+    #banner__image {
+        // height: 20vh;
+        @include content-margin (0, 0 , 0);
+        border-bottom-left-radius: 0;    
+        border-bottom-right-radius: 0;
+        background-color: transparent;
+    }
+}
+
 nav {
-    @include content-padding(100px, 100px, 0px);
+    height: 100%;
     display: grid;
     grid-template-columns: 2fr 1fr 2fr ;
-    width: 85vw;
-    position: relative;
-    margin: 0 auto; 
-
 
     .logo {
         font-size: 20px;
@@ -134,11 +178,13 @@ nav {
         letter-spacing: 0.5em;
         justify-self: center;
         align-self: center;
+        margin-bottom: 8px;
     }
 
 
     .nav_links_left {
         justify-self: start;
+        align-self: center;
         ul { 
             list-style: none;
             margin: 0;
@@ -162,6 +208,7 @@ nav {
 
     .nav_links_right {
         justify-self: end;
+        align-self: center;
         ul { 
             list-style: none;
             margin: 0;
@@ -195,8 +242,12 @@ nav {
 
 /* big landscape tablets, laptops, and desktops */
 @media (max-width:1025px) {
-    nav {
+
+    header {
         @include content-padding(50px, 50px, 0px);
+    }
+
+    nav {
         display: grid;
         grid-template-columns: 1fr 1fr;
     
@@ -208,6 +259,7 @@ nav {
             justify-self: left;
             align-self: auto;
             grid-column: 1;
+            margin-bottom: 0px;
         }
     
         .nav_links_right {
