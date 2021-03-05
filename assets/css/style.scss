@@ -1,3 +1,15 @@
+// Repeater
+
+@function repeater($n, $character) {
+    $c: "";
+
+    @for $i from 1 through $n {
+        $c: $c +" "+ $character;
+    }
+
+    @return unquote($c);
+}
+
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
@@ -25,7 +37,7 @@ a {
     @include main-fonts($custom-color-5);
 
     &:hover {
-        @include main-fonts($custom-color-1);
+        @include main-fonts(black);
     }
 }
 
@@ -118,32 +130,69 @@ input {
     min-height: 80px;
     display: flex;
     align-items: center;
-    height: calc((100vh * 0.3) - 50px);
-    @include content-margin (50px, auto , 50px);
+    height: calc((100vh * 0.3) - 3rem);
+    @include content-margin (3rem, auto , 3rem);
     @include border-radius (30px, 0);
     background-color: $custom-color-3;
 }
 
 #banner__image {
     min-height: 50px;
-    height: calc((100vh * 0.7) - 50px);
-    @include content-margin (0, 50px , 50px);
+    height: calc((100vh * 0.7) - 3rem);
+    @include content-margin (0, 3rem , 3rem);
     @include border-radius (0, 30px); 
     background-color: $custom-color-3;
-    background-image:  url('http://www.mintorganiccare.com/wp-content/uploads/2019/05/Cork-candles-.jpg');
+    background-image:  url('/minalva/assets/img/banner.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.8;
+    .banner__overlay {
+        display: flex;
+        align-items: center; 
+        justify-content: end;
+        background-image: radial-gradient(rgba(0, 0, 0, 0.15) 50%, transparent 50%);
+        background-size: 4px 4px;
+        width: 100%;
+        height: 100%; // height of the image
+        @include border-radius (0, 30px); 
+        .banner__content {
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+            ul {
+                width: 75%;
+                list-style: none;
+                margin: 0;
+                padding: 0; 
+                
+                li {
+                    margin-top: 2em;
+                    h1 {
+                        font: 2em "Varela Round", sans-serif;
+                        color: $custom-color-4;
+                    }
+                    .banner__button {
+                        background-color: transparent; 
+                        border: 2px solid $custom-color-4; 
+                        color: $custom-color-4;
+                        padding: 1em 2em;
+                        text-align: center;
+                        text-decoration: none;
+                        font-size: 1em;
+                        cursor: pointer;
+                        transition: all 250ms;
+                        &:hover {
+                            background-color: $custom-color-4;
+                            color: $custom-color-3;
+                        }
+                    }
+                }
+            } 
+        }
+      }
 }
 
-.banner__overlay {
-    background-image: radial-gradient(black 50%, transparent 50%);
-    background-size: 4px 4px;
-    width: 100%;
-    height: 100%; /*height of the image*/
-    @include border-radius (0, 30px); 
-  }
+
 
 
 /* big landscape tablets, laptops, and desktops */
@@ -160,6 +209,14 @@ input {
         @include content-margin (0, 0 , 0);
         @include border-radius (0, 0);
         background-color: transparent;
+        .banner__overlay {
+            justify-content: center;
+            .banner__content {
+                ul {
+                    text-align:center!important;
+                }
+            }
+        }
     }
 }
 
@@ -176,11 +233,14 @@ nav {
     grid-template-columns: 2fr 1fr 2fr ;
 
     .logo {
-        font-size: 20px;
+        font-size: 22px;
         text-transform: uppercase;
-        letter-spacing: 0.5em;
         justify-self: center;
         align-self: center;
+        margin-bottom: 10px;
+        letter-spacing: 0.5em;
+        margin-right:-0.5em; // remove spacing from last letter
+        }
     }
 
 
@@ -197,6 +257,12 @@ nav {
                 margin-right: 40px;
                 a {
                     letter-spacing: 2px;
+                    &::after {
+                        @include nav-link-hover();
+                    }
+                    &:hover::after {
+                        width: 100%;
+                    }
                 }
         }    
     }
@@ -214,6 +280,12 @@ nav {
                 margin-left: 40px;
                 a {
                     letter-spacing: 2px;
+                    &::after {
+                        @include nav-link-hover();
+                    }
+                    &:hover::after {
+                        width: 100%;
+                    }
                 }
             }
         }    
@@ -228,7 +300,6 @@ nav {
             }
         }
     }
-}
 
 /* big landscape tablets, laptops, and desktops */
 @media (max-width:1025px) {
@@ -271,13 +342,13 @@ nav {
         margin-bottom: 40px;
         h1 {
             @include main-fonts($custom-color-5);
-            font-size:20px!important;
+            font-size:18px!important;
         }
         }
 
     .product__grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeater(4, 1fr);
         --repeat: auto-fit;
         column-gap: 25px;
         row-gap: 40px;        
@@ -312,23 +383,19 @@ nav {
             border-radius: 10px;
         }
         .title {
+            font-size: 10px;
             margin-top: 25px;
             text-transform: uppercase;
-            font-size: 9px;
-            color: $custom-color-4;
         }
     
         .name {
             padding-top: 5px;
-            font-size: 12px;
-            color: $custom-color-4;
+            font-size: 15px;
         }
     
         .price {
             margin: 5px 0 25px 0; 
             text-transform: uppercase;
-            font-size: 12px;
-            color: $custom-color-5;
         }
 
         a:hover .img__default {
@@ -345,7 +412,7 @@ nav {
 @media (min-width:320px)  {
     #products {
         .product__grid {
-            grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: repeater(1, 1fr);
         }
     }
 }
@@ -354,7 +421,7 @@ nav {
 @media (min-width:481px)  {
     #products {
         .product__grid {
-            grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: repeater(1, 1fr);
         }
     }
 }
@@ -363,7 +430,7 @@ nav {
 @media (min-width:641px)  {
     #products {
         .product__grid {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeater(3, 1fr);
         }
     }
 }
@@ -372,7 +439,7 @@ nav {
 @media (min-width:961px)  {
     #products {
         .product__grid {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeater(3, 1fr);
         }
     }
 }
@@ -381,7 +448,7 @@ nav {
 @media (min-width:1025px) {
     #products {
         .product__grid {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeater(3, 1fr);
         }
     }
 }
@@ -390,7 +457,7 @@ nav {
 @media (min-width:1281px) {
     #products {
         .product__grid {
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeater(4, 1fr);
         }
     }
 }
@@ -425,7 +492,6 @@ nav {
         .copyright {
             grid-column: 1/6;
             grid-row: 2/3;
-            font-size: 10px;
             text-align: right;
             line-height: 1.8em;
             z-index: 0;

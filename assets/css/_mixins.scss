@@ -38,16 +38,16 @@
 
 //Navbar
 
-/* @mixin nav-link-hover() {
+@mixin nav-link-hover() {
     content: '';
     display: block;
-    height: 2px;
+    height: 0.1em;
     width: 0%;
-    background-color: $custom-color-1;
-    margin-top: 5px;
+    background-color: black;
+    margin-top: 10px;
     transition: all ease-in-out 250ms;
 }
-*/
+
 
 //Footer
 
