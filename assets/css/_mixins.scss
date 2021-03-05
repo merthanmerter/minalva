@@ -1,6 +1,7 @@
 // General
 @mixin main-fonts($color) {
-    font: 12px "Varela Round", sans-serif;
+    font: 9pt "Quicksand", sans-serif;
+    font-weight: 600;
     letter-spacing: 0.05em;
     color: $color;
     text-decoration: none;
@@ -41,7 +42,7 @@
 @mixin nav-link-hover() {
     content: '';
     display: block;
-    height: 0.1em;
+    height: 1px;
     width: 0%;
     background-color: black;
     margin-top: 10px;
