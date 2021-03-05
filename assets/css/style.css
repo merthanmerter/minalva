@@ -246,7 +246,7 @@ input {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   background-color: #F7F7F7;
-  background-image: url("/minalva/assets/img/banner.jpg");
+  background-image: url("../img/banner.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

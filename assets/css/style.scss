@@ -142,7 +142,7 @@ input {
     @include content-margin (0, 3rem , 3rem);
     @include border-radius (0, 30px); 
     background-color: $custom-color-3;
-    background-image:  url('/minalva/assets/img/banner.jpg');
+    background-image:  url('../img/banner.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
