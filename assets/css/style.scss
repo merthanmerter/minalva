@@ -231,6 +231,7 @@ input {
             transform: translateX(-30px);
             text-align: center;
             line-height: 60px;
+            transition: background-color 250ms ease-in-out, opacity 250ms ease-in-out;
         }
       }
 }
@@ -239,7 +240,7 @@ input {
     #banner__image {
         .banner__overlay {
             .icon-scroll {
-                visibility: hidden;
+                opacity: 0;
             }
         }
     }
@@ -378,6 +379,7 @@ nav {
             justify-self: left;
             align-self: auto;
             grid-column: 1;
+            margin-bottom: 0;
         }
     
         .nav_links_right {

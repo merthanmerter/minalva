@@ -364,11 +364,13 @@ input {
           transform: translateX(-30px);
   text-align: center;
   line-height: 60px;
+  -webkit-transition: background-color 250ms ease-in-out, opacity 250ms ease-in-out;
+  transition: background-color 250ms ease-in-out, opacity 250ms ease-in-out;
 }
 
 @media only screen and (max-height: 480px) {
   #banner__image .banner__overlay .icon-scroll {
-    visibility: hidden;
+    opacity: 0;
   }
 }
 
@@ -557,6 +559,7 @@ nav .logo {
         align-self: auto;
     -ms-grid-column: 1;
     grid-column: 1;
+    margin-bottom: 0;
   }
   nav .nav_links_right {
     display: none;
