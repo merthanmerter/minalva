@@ -570,6 +570,7 @@ nav {
         outline: none;
         border-color: $custom-color-5;
         background-color: transparent;
+        outline: 0;
         &:hover {
             color: $custom-color-5;
             transition: color 0.2s;
@@ -638,6 +639,11 @@ nav {
                 justify-self: center;
                 align-self: center;
                 text-align: center;
+            }
+        }
+        #footer form {
+            input[type="submit"] {
+                visibility: hidden;
             }
         }
 }

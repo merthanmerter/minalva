@@ -858,6 +858,7 @@ nav .logo {
   outline: none;
   border-color: #5e5e5e;
   background-color: transparent;
+  outline: 0;
 }
 
 #footer form input[type="email"]:hover {
@@ -963,6 +964,9 @@ nav .logo {
         -ms-grid-row-align: center;
         align-self: center;
     text-align: center;
+  }
+  #footer form input[type="submit"] {
+    visibility: hidden;
   }
 }
 /*# sourceMappingURL=style.css.map */
