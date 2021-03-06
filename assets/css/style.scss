@@ -235,7 +235,15 @@ input {
       }
 }
 
-
+@media only screen and (max-height: 480px) {
+    #banner__image {
+        .banner__overlay {
+            .icon-scroll {
+                visibility: hidden;
+            }
+        }
+    }
+}
 
 
 /* big landscape tablets, laptops, and desktops */

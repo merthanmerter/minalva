@@ -366,6 +366,12 @@ input {
   line-height: 60px;
 }
 
+@media only screen and (max-height: 480px) {
+  #banner__image .banner__overlay .icon-scroll {
+    visibility: hidden;
+  }
+}
+
 /* big landscape tablets, laptops, and desktops */
 @media (max-width: 1025px) {
   #banner {
