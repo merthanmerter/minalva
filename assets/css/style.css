@@ -351,17 +351,19 @@ input {
   color: #282828;
 }
 
-#banner__image .banner__overlay .icon-scroll,
-#banner__image .banner__overlay .icon-scroll:before {
-  position: absolute;
-  left: calc(50vw - 3em);
-}
-
 #banner__image .banner__overlay .icon-scroll {
+  display: block;
+  border-radius: 120px;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  position: absolute;
   top: calc(100vh - 6em);
-  background-color: white;
-  border-radius: 50%;
-  padding: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-30px);
+          transform: translateX(-30px);
+  text-align: center;
+  line-height: 60px;
 }
 
 /* big landscape tablets, laptops, and desktops */
