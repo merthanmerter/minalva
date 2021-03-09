@@ -37,19 +37,6 @@
     border-bottom-right-radius: $bottom;
 }
 
-//Navbar
-
-@mixin nav-link-hover() {
-    content: '';
-    display: block;
-    height: 1px;
-    width: 0%;
-    background-color: black;
-    margin-top: 10px;
-    transition: all ease-in-out 200ms;
-}
-
-
 //Footer
 
 @mixin footer_list() {

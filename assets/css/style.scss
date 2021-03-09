@@ -151,6 +151,18 @@ input {
     @include fix-width(85vw);
 }
 
+#topnav {
+    position: fixed;
+    background-color: white;
+    padding-bottom: 10px!important;
+    left: 0;
+    right: 0;
+    top: -100px;
+    opacity: 0;
+    z-index: 1;
+    transition: all 100ms ease-in-out;
+}
+
 #staticnav {
     min-height: 80px;
     display: flex;
@@ -159,6 +171,111 @@ input {
     @include content-margin (3rem, auto , 3rem);
     @include border-radius (30px, 0);
     background-color: $custom-color-3;
+}
+
+header {
+    width: 85vw;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 10px!important;  
+    left: 0;
+    right: 0;
+}
+
+nav {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr ;
+
+    .logo {
+        font: 16pt "Varela Round", sans-serif;
+        text-transform: uppercase;
+        justify-self: center;
+        align-self: center;
+        letter-spacing: 0.5em;
+        margin-right:-0.5em; // remove spacing from last letter
+        }
+    }
+
+
+    .nav_links_left {
+        justify-self: start;
+        align-self: center;
+        ul { 
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                display: inline-block;
+                position: relative;
+                margin-right: 40px;
+                a {
+                    letter-spacing: 0.15em;
+                }
+        }    
+    }
+}
+
+    .nav_links_right {
+        justify-self: end;
+        align-self: center;
+        ul { 
+            list-style: none;
+            margin: 0;
+            padding: 0; 
+            li {
+                display: inline-block; 
+                margin-left: 40px;
+                a {
+                    letter-spacing: 0.15em;
+                }
+            }
+        }    
+    }
+
+    .navbar-toggle {
+        display: none;
+        ul {
+            li {
+                display: inline-block;
+                padding-left: 20px;
+            }
+        }
+    }
+
+/* big landscape tablets, laptops, and desktops */
+@media (max-width:1025px) {
+
+    header {
+        @include content-padding(20px, 20px, 0px); 
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    
+        .nav_links_left {
+            display: none;
+        }
+    
+        .logo {
+            justify-self: left;
+            align-self: auto;
+            grid-column: 1;
+            margin-bottom: 0;
+        }
+    
+        .nav_links_right {
+            display: none;
+        }
+    
+        .navbar-toggle {
+            grid-column: 2;
+            display: block;
+            justify-self: end;
+            align-self: center;
+        }
+    }
 }
 
 #banner__image {
@@ -279,134 +396,32 @@ input {
     }
 }
 
-#topnav {
-    position: fixed;
-    background-color: white;
-    left: 0;
-    right: 0;
-    top: -105px;
-    opacity: 0;
-    z-index: 1;
-    transition: all 100ms ease-in-out;
-}
 
-header {
-    width: 85vw;
-    position: relative;
-    margin: 0 auto;
-    margin-top: 10px!important;  
-    left: 0;
-    right: 0;
-}
 
-nav {
-    height: 100%;
-    display: grid;
-    grid-template-columns: 2fr 1fr 2fr ;
+#featured {
+    @include content-padding(50px, 100px, 0px);
+    display:grid;
+    place-items: center;
 
-    .logo {
-        font: 16pt "Varela Round", sans-serif;
-        text-transform: uppercase;
-        justify-self: center;
-        align-self: center;
-        margin-bottom: 10px;
-        letter-spacing: 0.5em;
-        margin-right:-0.5em; // remove spacing from last letter
+    div {
+        width: 60%;
+        &:first-child {
+            border-bottom: 1px dotted grey;
         }
-    }
-
-
-    .nav_links_left {
-        justify-self: start;
-        align-self: center;
-        ul { 
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            li {
-                display: inline-block;
-                position: relative;
-                margin-right: 40px;
-                a {
-                    letter-spacing: 2px;
-                    &::after {
-                        @include nav-link-hover();
-                    }
-                    &:hover::after {
-                        width: 100%;
-                    }
-                }
-        }    
-    }
+        p {
+            @include content-padding(20px, 20px, 0px);
+        }
+     }    
 }
 
-    .nav_links_right {
-        justify-self: end;
-        align-self: center;
-        ul { 
-            list-style: none;
-            margin: 0;
-            padding: 0; 
-            li {
-                display: inline-block; 
-                margin-left: 40px;
-                a {
-                    letter-spacing: 2px;
-                    &::after {
-                        @include nav-link-hover();
-                    }
-                    &:hover::after {
-                        width: 100%;
-                    }
-                }
-            }
-        }    
-    }
-
-    .navbar-toggle {
-        display: none;
-        ul {
-            li {
-                display: inline-block;
-                padding-left: 20px;
-            }
-        }
-    }
-
-/* big landscape tablets, laptops, and desktops */
 @media (max-width:1025px) {
-
-    header {
-        @include content-padding(20px, 20px, 0px); 
-    }
-
-    nav {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    
-        .nav_links_left {
-            display: none;
-        }
-    
-        .logo {
-            justify-self: left;
-            align-self: auto;
-            grid-column: 1;
-            margin-bottom: 0;
-        }
-    
-        .nav_links_right {
-            display: none;
-        }
-    
-        .navbar-toggle {
-            grid-column: 2;
-            display: block;
-            justify-self: end;
-            align-self: center;
-        }
+    #featured {
+        div {
+            width: 100%;
+         }    
     }
 }
+
 
 #products {
 
@@ -436,6 +451,7 @@ nav {
                 grid-column-start: 1;
              }    
         }
+
 
         .img__default {
             width: 100%;
