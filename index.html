@@ -10,12 +10,53 @@
 <body>
 
 <!-- Wrapper -->
+
+<div id="topnav">
+
+	<!-- Navbar -->
 	
-	<div id="banner">
+	<header>
+		<nav>
+			<div class="nav_links_left">
+				<ul>
+					<li><a href="#">Ürünler</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">İletişim</a></li>
+				  </ul>
+			</div>
+			<div class="logo">
+				minälva
+						</div>
+			<div class="nav_links_right">
+				<ul>
+					<li><a href="#">Üye Girişi</a></li>
+					<li><a href="#">Ara</a></li>
+					<li><a href="#">Sepet ( 0 )</a></li>
+				  </ul>
+			</div>
+			<div class="navbar-toggle">
+				<ul>
+					<a href="#"><li>
+						<i class="material-icons">shopping_bag</i>
+					</li></a>
+					<a href="#"><li>
+						<i class="material-icons">menu</i>
+					</li></a>
+				</ul>
+			
+			</div>
+		</nav>
+	</header>
+	
+	<!-- /Navbar -->
+	
+	</div>
+
+<div id="staticnav">
 
 <!-- Navbar -->
 
-	<header>
+<header>
 	<nav>
 		<div class="nav_links_left">
 			<ul>
@@ -193,7 +234,7 @@
 				<p class="price">50 TL</p>
 			</figure>
 		</a>
-		
+
 		<a href="#">
 			<figure>
 				<div class="product__parent">
@@ -306,6 +347,22 @@
 </div>
 
 <!-- /Wrapper -->	
+
+<script>
+	// navbar float
+	window.onscroll = function() {scrollFunction()};
+	
+	function scrollFunction() {
+	  if (document.body.scrollTop > window.innerHeight * 0.15 || document.documentElement.scrollTop > window.innerHeight * 0.15) {
+		document.getElementById("topnav").style.top = "0";
+		document.getElementById("topnav").style.opacity = "1";
+
+	  } else {
+		document.getElementById("topnav").style.top = "";
+		document.getElementById("topnav").style.opacity = "";		
+	  }
+	}
+	</script>
 
 		</body>
 	</html>

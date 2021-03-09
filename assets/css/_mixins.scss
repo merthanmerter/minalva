@@ -5,7 +5,7 @@
     letter-spacing: 0.05em;
     color: $color;
     text-decoration: none;
-    transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    transition: color 200ms ease-in-out, opacity 200ms ease-in-out;
 }
 
 @mixin fix-width($width) {
@@ -46,7 +46,7 @@
     width: 0%;
     background-color: black;
     margin-top: 10px;
-    transition: all ease-in-out 250ms;
+    transition: all ease-in-out 200ms;
 }
 
 
@@ -72,7 +72,7 @@
     visibility: hidden;
     opacity: 0;
     transform: translateY(-2em);
-    transition: visibility 0.1s, opacity 0.1s linear, transform 0.1s;
-    transition-delay: transform 0.1s;
+    transition: visibility 100ms, opacity 100ms linear, transform 100ms;
+    transition-delay: transform 100ms;
 }
 
