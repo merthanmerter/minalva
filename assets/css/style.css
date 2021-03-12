@@ -67,6 +67,13 @@
           box-sizing: border-box;
 }
 
+.hidden {
+  height: 0;
+  width: 0;
+  display: none;
+  visibility: hidden;
+}
+
 body {
   font: 9pt "Quicksand", sans-serif;
   font-weight: 600;
@@ -576,6 +583,10 @@ nav .logo {
 
 #featured div:first-child {
   border-bottom: 1px dotted grey;
+}
+
+#featured div h2 {
+  font-size: 1.2em;
 }
 
 #featured div p {

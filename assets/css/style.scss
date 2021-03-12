@@ -415,6 +415,9 @@ nav {
         &:first-child {
             border-bottom: 1px dotted grey;
         }
+        h2 {
+            font-size: 1.2em;
+        }
         p {
             @include content-padding(20px, 20px, 0px);
         }
