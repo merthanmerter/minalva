@@ -54,6 +54,13 @@
     box-sizing: border-box;
 }
 
+.hidden {
+    height: 0; 
+    width: 0;
+    display:none;
+    visibility:hidden;
+}
+
 body {
     @include main-fonts($custom-color-5);
 }

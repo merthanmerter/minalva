@@ -92,7 +92,10 @@
 
 <!-- GoogleTagManager (noscript) -->
 
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P98L29D" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript>
+	<iframe class="hidden" src="https://www.googletagmanager.com/ns.html?id=GTM-P98L29D">
+	</iframe>
+</noscript>
 
 <!-- /GoogleTagManager (noscript) -->
 
@@ -204,6 +207,8 @@
 <div class="margin-v-60-30"></div>
 
 <!-- Featured -->
+
+<div class="addthis_inline_follow_toolbox"></div> 
 
 <div id="featured">
 	<div><p>Minalva, ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit quis nisi voluptates doloremque est in odio sapiente pariatur ratione earum, fugiat sunt amet et facilis obcaecati cupiditate minima eius nam molestias, consequuntur quo laborum at exercitationem dolorum. Atque autem voluptatum eos odit, harum illo nemo fuga non. Esse, aut impedit.</p></div>
@@ -447,16 +452,19 @@
 	window.onscroll = function() {scrollFunction()};
 	
 	function scrollFunction() {
-	  if (document.body.scrollTop > window.innerHeight * 0.15 || document.documentElement.scrollTop > window.innerHeight * 0.15) {
+		if (document.body.scrollTop > window.innerHeight * 0.15 || document.documentElement.scrollTop > window.innerHeight * 0.15) {
 		document.getElementById("topnav").style.top = "0";
 		document.getElementById("topnav").style.opacity = "1";
 
-	  } else {
+		} else {
 		document.getElementById("topnav").style.top = "";
 		document.getElementById("topnav").style.opacity = "";		
-	  }
+		}
 	}
-	</script>
+</script>
 
-		</body>
-	</html>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-604badee33d58f20"></script>
+
+</body>
+
+</html>
