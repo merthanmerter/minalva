@@ -1,10 +1,10 @@
 // Color Schemes
-$custom-color-1: #CC5E57; // Coral>
-$custom-color-2: #98D3DA; // Shell
-$custom-color-3: #F7F7F7; // Light Grey
-$custom-color-4: #282828; // Dark Grey
-$custom-color-5: #5e5e5e; // Mid Grey
-$custom-color-6: #e8e8e8; // Low Grey
+$custom-color-1: hsl(4, 53%, 57%); // Coral>
+$custom-color-2: hsl(186, 47%, 73%); // Shell
+$custom-color-3: hsl(0, 0%, 97%); // Light Grey
+$custom-color-4: hsl(0, 0%, 16%); // Dark Grey
+$custom-color-5: hsl(0, 0%, 37%); // Mid Grey
+$custom-color-6: hsl(0, 0%, 91%); // Low Grey
 
 // Color Class
 [class~="white"] { color: white; }

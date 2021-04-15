@@ -41,19 +41,19 @@
 }
 
 [class~="custom-color-1"] {
-  color: #CC5E57;
+  color: #cb5f57;
 }
 
 [class~="custom-color-2"] {
-  color: #98D3DA;
+  color: #9ad4db;
 }
 
 [class~="custom-color-3"] {
-  color: #F7F7F7;
+  color: #f7f7f7;
 }
 
 [class~="custom-color-4"] {
-  color: #282828;
+  color: #292929;
 }
 
 [class~="custom-color-5"] {
@@ -126,12 +126,12 @@ input {
 
 ::-moz-selection {
   background: white;
-  color: #98D3DA;
+  color: #9ad4db;
 }
 
 ::selection {
   background: white;
-  color: #98D3DA;
+  color: #9ad4db;
 }
 
 .clearfix::after {
@@ -281,7 +281,7 @@ input {
   border-top-right-radius: 30px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
 
 header {
@@ -422,7 +422,7 @@ nav .logo {
   border-top-right-radius: 0;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   background-image: url("../img/banner.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -495,7 +495,7 @@ nav .logo {
 
 #banner__image .banner__overlay .banner__content ul li .banner__button:hover {
   background-color: white;
-  color: #282828;
+  color: #292929;
 }
 
 #banner__image .banner__overlay .icon-scroll {
